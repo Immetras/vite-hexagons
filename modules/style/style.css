@@ -1,0 +1,9 @@
+#main {
+    position: relative;
+}
+
+.hex {
+    height: 50px;
+    width: 25px;
+    position: absolute;
+}
