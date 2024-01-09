@@ -1,9 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #main {
-    position: relative;
+  /* width: 100vw; */
+  display: flex;
+  flex-direction: row;
+}
+
+#edit,
+#json,
+#hexes {
+  display: inline-block;
+  height: 100vh;
+  flex: 1;
+}
+
+#edit {
+  background-color: darkgrey;
+  flex: 0 0 200px;
+}
+
+#json {
+  background-color: lightgrey;
+  flex: 0 0 200px;
+}
+
+#hexes {
+  position: relative;
+  background-color: white;
 }
 
 .hex {
-    height: 50px;
-    width: 25px;
-    position: absolute;
+  width: 50px;
+  height: 43px;
+  position: absolute;
+  background-color: green;
 }
