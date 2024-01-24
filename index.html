@@ -11,9 +11,16 @@
   <body>
     <div id="main">
       <div id="edit">
-        <h5>size</h5>
-        <select name="size" id="size"></select>
-        <h5>game items</h5>
+        <p>size</p>
+        <select name="size" id="size">
+          <option value="" selected hidden></option>
+        </select>
+        <p>game items</p>
+        <div id="buttons">
+          <button>WALLS</button>
+          <button>TRASURE</button>
+          <button class="light">LIGHT</button>
+        </div>
       </div>
 
       <div id="json"></div>

@@ -18,8 +18,33 @@
 }
 
 #edit {
+  padding: 8px;
   background-color: darkgrey;
   flex: 0 0 200px;
+  font-size: large;
+  font-weight: normal;
+}
+#buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#edit select {
+  padding: 2px 4px;
+  border-radius: 0;
+  border: 2px solid black;
+}
+
+#edit button {
+  width: calc(200px - 10%);
+  border: none;
+  height: 20px;
+  margin: 3px;
+  border-radius: 10px;
+  font-size: medium;
+}
+#edit button.light {
+  color: blue;
 }
 
 #json {
@@ -33,8 +58,10 @@
 }
 
 .hex {
-  width: 50px;
-  height: 43px;
+  width: 80px;
+  height: calc(sqrt(3) * 80px);
   position: absolute;
-  background-color: green;
+  background-image: url(../gfx/hex.png);
+  background-size: 80px;
+  /* background-color: green; */
 }

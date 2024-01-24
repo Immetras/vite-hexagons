@@ -12,16 +12,15 @@ export default class Hex {
     const hStyl = this.hex.style;
 
     this.hex.className = "hex";
-    hStyl.left = `${25 + this.x * 50}px`;
-    hStyl.top = `${
-      this.y % 2 == 1
-        ? (25 * Math.sqrt(3)) / 2 + this.y * 25 * Math.sqrt(3)
-        : this.y * 25 * Math.sqrt(3)
-    }px`;
+    hStyl.left = `${25 + this.x * 60}px`;
+    this.y *= Math.sqrt(3) * 40;
+    this.x % 2 == 1 ? (this.y += Math.sqrt(3) * 20) : null;
+    hStyl.top = `${this.y}px`;
 
-    this.innertext = (this.x, this.y);
+    console.log(hStyl.left, hStyl.top);
+    this.innertext = `${this.x},${this.y}`;
   }
   getRoot() {
-    return this.div;
+    return this.hex;
   }
 }

@@ -10,15 +10,16 @@ select.addEventListener("change", generate);
 
 function generate() {
   const size = select.value;
-  console.log(size);
+  console.log(`size is: ${size}`);
 
   const hexes = document.getElementById("hexes");
-  console.log(hexes);
+  hexes.innerHTML = null;
+  // console.log(hexes);
 
   for (let i = 0; i < size; i++) {
-    for (let j = 0; j < size - 1; j++) {
+    for (let j = 0; j < Math.floor(size / 2); j++) {
       const hex = new Hex(i, j);
-      console.log(hex);
+      // console.log(hex);
       hexes.appendChild(hex.getRoot());
     }
   }
