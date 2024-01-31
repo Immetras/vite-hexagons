@@ -17,7 +17,7 @@ function generate() {
   // console.log(hexes);
 
   for (let i = 0; i < size; i++) {
-    for (let j = 0; j < Math.floor(size / 2); j++) {
+    for (let j = 0; j < size - 1; j++) {
       const hex = new Hex(i, j);
       // console.log(hex);
       hexes.appendChild(hex.getRoot());

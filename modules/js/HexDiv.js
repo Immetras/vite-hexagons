@@ -19,6 +19,13 @@ export default class Hex {
 
     console.log(hStyl.left, hStyl.top);
     this.innertext = `${this.x},${this.y}`;
+    let rotation = 0;
+    this.hex.addEventListener("click", () => {
+      rotation = rotation % 6;
+      rotation++;
+      hStyl.backgroundImage = `url(/modules/gfx/${rotation}.png)`;
+      console.warn(`clicked`, rotation, this);
+    });
   }
   getRoot() {
     return this.hex;

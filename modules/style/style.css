@@ -59,7 +59,7 @@
 
 .hex {
   width: 80px;
-  height: calc(sqrt(3) * 80px);
+  height: calc(sqrt(3) * 40px);
   position: absolute;
   background-image: url(../gfx/hex.png);
   background-size: 80px;
