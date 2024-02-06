@@ -1,5 +1,6 @@
 import "./modules/style/style.css";
 import "./modules/js/select.js";
+import "./modules/js/button.js";
 
 import Hex from "./modules/js/HexDiv.js";
 
