@@ -1,3 +1,5 @@
+import { stringify } from "postcss";
+
 export default class Hex {
   constructor(x, z) {
     this.x = x;
@@ -46,27 +48,36 @@ export default class Hex {
               curType
             );
             exists = true;
-            console.warn("kutag");
             break;
           } else {
-            console.error("spucha");
             exists = false;
           }
         }
 
         console.error(exists);
         if (!exists) {
-          console.error("sperma");
           map.size++;
-          map.level.push(
-            new lvl(this.x, this.z, this.rotation, this.rotation + 3, curType)
+          let test = new lvl(
+            this.x,
+            this.z,
+            this.rotation,
+            this.rotation + 3,
+            curType
           );
+          map.level.push(test);
         }
       }
 
       console.table(map);
       console.table(map.level);
-      document.getElementById("json").innerText = JSON.stringify(map);
+      const p = document.createElement("p");
+      let stringed = JSON.stringify(map, null, 2);
+      // console.log(stringed);
+      p.innerText = stringed;
+      document.getElementById("json").innerHTML = "";
+      document.getElementById("json").appendChild(p);
+
+      // document.getElementById("json").innerText = stringed;
     });
   }
 
